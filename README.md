@@ -38,3 +38,9 @@ Inputs:
 | 15          | 0           | 25.5-30     | 25.5 30 -        |
 | 16          | =           | -4.5        | -4.5             |
 
+## Journey
+
+[ ] Setup project
+[ ] Work out what I'm doing
+[ ] Make unit tests from the steps
+[ ] Get coding
