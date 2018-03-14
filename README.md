@@ -89,4 +89,7 @@ Time for some TDD, I think.
 
 ## Unit Testing
 
-I'm opting to use [The Art of Unit Testing](http://osherove.com/blog/2005/4/3/naming-standards-for-unit-tests.html) for naoing standards.
+I'm opting to use [The Art of Unit Testing](http://osherove.com/blog/2005/4/3/naming-standards-for-unit-tests.html) for naming standards.
+
+For example, each test name follows the pattern *UnitOfWork_StateUnderTest_ExpectedBehavior*.
+
