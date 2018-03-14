@@ -40,7 +40,7 @@ Inputs:
 
 ## Journey
 
-[ ] Setup project
-[ ] Work out what I'm doing
-[ ] Make unit tests from the steps
-[ ] Get coding
+- [ ] Setup project 
+- [ ] Work out what I'm doing
+- [ ] Make unit tests from the steps
+- [ ] Get coding
