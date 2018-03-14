@@ -86,3 +86,7 @@ I'm trying hard to read ahead too much, and I lack a true compsci background, th
 The challenge doesn't really deal with parentheses (yay!) so we're mainly interested, for now, in type 1 and 4.
 
 Time for some TDD, I think.
+
+## Unit Testing
+
+I'm opting to use [The Art of Unit Testing](http://osherove.com/blog/2005/4/3/naming-standards-for-unit-tests.html) for naoing standards.
