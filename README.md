@@ -85,9 +85,29 @@ I'm trying hard to read ahead too much, and I lack a true compsci background, th
 
 The challenge doesn't really deal with parentheses (yay!) so we're mainly interested, for now, in type 1 and 4.
 
+*Note: for the purposes of this challenge I'm going to use / insted of ÷.*
+
+The flow that pops out here is:
+1. User inputs as Infix
+2. Calculaton transforms to Postfix
+3. Postfix calculated
+4. Displayed
+
+A quick search reveals an algorithm that can be used to transform Infix to Postfix is known as Shunting Yard.
+
+## Development
+
+### Shunting Yard
+
+TBC
+
+### Calculation
+
+TBC
+
 Time for some TDD, I think.
 
-## Unit Testing
+### Unit Testing
 
 I'm opting to use [The Art of Unit Testing](http://osherove.com/blog/2005/4/3/naming-standards-for-unit-tests.html) for naming standards.
 
