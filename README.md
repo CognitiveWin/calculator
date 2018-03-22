@@ -99,7 +99,108 @@ A quick search reveals an algorithm that can be used to transform Infix to Postf
 
 ### Shunting Yard
 
-TBC
+The (Shunting Yard)[https://en.wikipedia.org/wiki/Shunting-yard_algorithm] algorithm is old-school. It was developed by (Edsger Dijkstra])[https://en.wikipedia.org/wiki/Edsger_Dijkstra] around 1961.
+
+The algorithm uses a stack and a queue for managing tokens, the elements of the infix input. As an input is read it is pushed onto the output queue (if a number) or the operator queue (if an operator). If an operator has a higher precedence than the top most operator then each operator is popped and pushed onto the output queue. When the operator stack is empty, the new operator is pushed onto it.
+
+This introduces a few interesting concepts that we will need to model:
+- operator precedents; (x, /) > (+, -)
+- stacks; first in last out (FILO)
+- queues; first in first out (FIFO)
+
+Taking our 6x5+3/2-6 example:
+
+Input 6: Output.push(6)
+
+| Operator | Output |
+| -------- | ------ |
+|          |      6 |
+
+Input x: Operator.push(x)
+
+| Operator | Output |
+| -------- | ------ |
+|        x |      6 |
+
+Input 5: Output.push(5)
+
+| Operator | Output |
+| -------- | ------ |
+|          |      5 |
+|        x |      6 |
+
+Input +: precedent(+) < precedent(x), Operator.pop(x), Output.push(x), Operator.push(+)
+
+| Operator | Output |
+| -------- | ------ |
+|          |      x |
+|          |      5 |
+|        + |      6 |
+
+Input 3: Ouput.push(3)
+
+| Operator | Output |
+| -------- | ------ |
+|          |      3 |
+|          |      x |
+|          |      5 |
+|        + |      6 |
+
+Input /: Operator.push(/)
+
+| Operator | Output |
+| -------- | ------ |
+|          |      3 |
+|          |      x |
+|        / |      5 |
+|        + |      6 |
+
+Input 2: Output.push(2)
+
+| Operator | Output |
+| -------- | ------ |
+|          |      2 |
+|          |      3 |
+|          |      x |
+|        / |      5 |
+|        + |      6 |
+
+Input -: precedent(-) < precedent(/), Output.push(/), Output.push(+)
+
+| Operator | Output |
+| -------- | ------ |
+|          |      + |
+|          |      / |
+|          |      2 |
+|          |      3 |
+|          |      x |
+|          |      5 |
+|        - |      6 |
+
+Input 6:  Output.push(6)
+
+| Operator | Output |
+| -------- | ------ | 
+|          |      6 | 
+|          |      / | 
+|          |      2 | 
+|          |      3 | 
+|          |      x | 
+|          |      5 | 
+|        - |      6 | 
+
+End: Output.push(-)
+
+| Operator | Output |
+| -------- | ------ |
+|          |      - |
+|          |      6 |
+|          |      / |
+|          |      2 |
+|          |      3 |
+|          |      x |
+|          |      5 |
+|          |      6 |
 
 ### Calculation
 
