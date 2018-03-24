@@ -10,46 +10,70 @@ import Foundation
 
 final class ShuntingYard {
     
-    var output: [String] = []
-    var operators: [String] = []
+    let input: [String]
+    var output = Queue<String>()
+    private var operators = Stack<String>()
     
-    var precendence: [String: Int] = ["x": 3, "/": 3, "+": 2, "-": 2]
-
-    func parse(infix: [String]) {
+    init(input: [String]) {
         
-        for token in infix {
-            process(token: token)
-        }
-        process(token: "=")
+        self.input = input
     }
     
+    func calculate() {
+        
+        for token in input {
+            process(token: token)
+        }
+        
+        if let op = operators.pop() {
+            output.enqueue(op)
+        }
+    }
+
     func process(token: String) {
         
-        debugPrint("State: \(output.joined()) \(operators.joined())")
+        debugPrint("State: \(output.elements.joined()) \(operators.elements.joined())")
         debugPrint("Token: \(token)")
         
         switch token {
             
-        case "=":
-            var op = operators.popLast()!
-            output.append(op)
-            
         case "0", "1", "2", "3", "4", "5", "6", "7", "8", "9":
-            output.append(token)
+            output.enqueue(token)
             
-        default:
+        case "x", "/", "+", "-":
 
-            var top = operators.last
+            var top = operators.peek()
             
-            while top != nil && precendence[top!]! >= precendence[token]! {
+            while let value = top, value.precedence >= token.precedence {
                 
-                var op = operators.popLast()!
-                output.append(op)
+                let op = operators.pop()!
+                output.enqueue(op)
                 
-                top = operators.last
+                top = operators.peek()
             }
 
-            operators.append(token)
+            operators.push(token)
+            
+        default:
+            fatalError()
+        }
+    }
+}
+
+extension StringLiteralType {
+    
+    var precedence: Int8 {
+        
+        switch self {
+            
+        case "x", "/":
+            return 20
+            
+        case "+", "-":
+            return 10
+            
+        default:
+            return 0
         }
     }
 }
