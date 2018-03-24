@@ -202,11 +202,76 @@ End: Output.push(-)
 |          |      5 |
 |          |      6 |
 
-### Calculation
+### Postfix Evaluation
 
-TBC
+See [Postfix expression evaluation](https://en.wikipedia.org/wiki/Reverse_Polish_notation#Postfix_evaluation_algorithm) for more details.
 
-Time for some TDD, I think.
+Postfix expressions are evaluated two operands and one operator at a time, which sees the postfix expression reduce as it is each triplet is evaluated.
+
+Taking the postfix expression, `6 5 x 3 2 / + 6 - ` and working through an example.
+
+Token 6: Output.push(6)
+
+| Output |
+| ------ |
+|      6 |
+
+Token 5: Output.push(5)
+
+| Output |
+| ------ |
+|      6 |
+|      5 |
+
+Token x: x As this is an operand, we pop two tokens from the stack and multiply them. Output.push(6 x 5)
+
+| Output |
+| ------ |
+|     30 |
+
+Token 3: Output.push(3)
+
+| Output |
+| ------ |
+|     30 |
+|      3 |
+
+Token 2: Output.push(2)
+
+| Output |
+| ------ |
+|     30 |
+|      3 |
+|      2 |
+
+Token /: Operand, so pop two and push the result, Output.pop(3), Output.pop(2), Output.push(3/2)
+
+| Output |
+| ------ |
+|     30 |
+|    1.5 |
+
+Token +: Operand, so pop two and push the result, Output.pop(1.5), Output.pop(30), Output.push(1.5 + 30)
+
+| Output |
+| ------ |
+|     30 |
+|    1.5 |
+
+Token 6: Output.push(6)
+
+| Output |
+| ------ |
+|   31.5 |
+|      6 |
+
+Token -: Operand, so Output.pop(6), Output.pop(31.5), Output.push(31.5-6)
+
+| Output |
+| ------ |
+|   25.5 |
+
+And it's evaluated.
 
 ### Unit Testing
 
