@@ -14,6 +14,16 @@
 		D258335D2059224E00462E2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D258335B2059224E00462E2F /* LaunchScreen.storyboard */; };
 		D25833682059224E00462E2F /* calculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25833672059224E00462E2F /* calculatorTests.swift */; };
 		D25833732059224E00462E2F /* calculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25833722059224E00462E2F /* calculatorUITests.swift */; };
+		D2616A3C205E6E3C001DC8CB /* ShuntingYardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2616A3B205E6E3C001DC8CB /* ShuntingYardTests.swift */; };
+		D2616A3E205E6E51001DC8CB /* ShuntingYard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2616A3D205E6E51001DC8CB /* ShuntingYard.swift */; };
+		D2616A3F205E6E5A001DC8CB /* ShuntingYard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2616A3D205E6E51001DC8CB /* ShuntingYard.swift */; };
+		D2616A40205E6E5B001DC8CB /* ShuntingYard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2616A3D205E6E51001DC8CB /* ShuntingYard.swift */; };
+		D2CCA37A2065180600C3A522 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CCA3792065180600C3A522 /* Stack.swift */; };
+		D2CCA37B2065180600C3A522 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CCA3792065180600C3A522 /* Stack.swift */; };
+		D2CCA37C20651D7500C3A522 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CCA3792065180600C3A522 /* Stack.swift */; };
+		D2CCA37E20651DCD00C3A522 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CCA37D20651DCD00C3A522 /* Queue.swift */; };
+		D2CCA37F20651DCD00C3A522 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CCA37D20651DCD00C3A522 /* Queue.swift */; };
+		D2CCA38020651DCD00C3A522 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CCA37D20651DCD00C3A522 /* Queue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +57,10 @@
 		D258336E2059224E00462E2F /* calculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = calculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D25833722059224E00462E2F /* calculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calculatorUITests.swift; sourceTree = "<group>"; };
 		D25833742059224E00462E2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2616A3B205E6E3C001DC8CB /* ShuntingYardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShuntingYardTests.swift; sourceTree = "<group>"; };
+		D2616A3D205E6E51001DC8CB /* ShuntingYard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShuntingYard.swift; sourceTree = "<group>"; };
+		D2CCA3792065180600C3A522 /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
+		D2CCA37D20651DCD00C3A522 /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +117,9 @@
 				D25833592059224E00462E2F /* Assets.xcassets */,
 				D258335B2059224E00462E2F /* LaunchScreen.storyboard */,
 				D258335E2059224E00462E2F /* Info.plist */,
+				D2616A3D205E6E51001DC8CB /* ShuntingYard.swift */,
+				D2CCA3792065180600C3A522 /* Stack.swift */,
+				D2CCA37D20651DCD00C3A522 /* Queue.swift */,
 			);
 			path = calculator;
 			sourceTree = "<group>";
@@ -112,6 +129,7 @@
 			children = (
 				D25833672059224E00462E2F /* calculatorTests.swift */,
 				D25833692059224E00462E2F /* Info.plist */,
+				D2616A3B205E6E3C001DC8CB /* ShuntingYardTests.swift */,
 			);
 			path = calculatorTests;
 			sourceTree = "<group>";
@@ -259,8 +277,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2CCA37E20651DCD00C3A522 /* Queue.swift in Sources */,
+				D2CCA37A2065180600C3A522 /* Stack.swift in Sources */,
 				D25833552059224E00462E2F /* ViewController.swift in Sources */,
 				D25833532059224E00462E2F /* AppDelegate.swift in Sources */,
+				D2616A3E205E6E51001DC8CB /* ShuntingYard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +289,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2CCA37F20651DCD00C3A522 /* Queue.swift in Sources */,
+				D2CCA37B2065180600C3A522 /* Stack.swift in Sources */,
 				D25833682059224E00462E2F /* calculatorTests.swift in Sources */,
+				D2616A3C205E6E3C001DC8CB /* ShuntingYardTests.swift in Sources */,
+				D2616A40205E6E5B001DC8CB /* ShuntingYard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +302,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D25833732059224E00462E2F /* calculatorUITests.swift in Sources */,
+				D2CCA37C20651D7500C3A522 /* Stack.swift in Sources */,
+				D2616A3F205E6E5A001DC8CB /* ShuntingYard.swift in Sources */,
+				D2CCA38020651DCD00C3A522 /* Queue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
