@@ -25,70 +25,70 @@ class EngineTests: XCTestCase {
         let engine = Engine()
         
         XCTAssertTrue(engine.infix == "Ready")
-//        XCTAssertTrue(engine.postfix == "Ready")
+        XCTAssertTrue(engine.postfix == "Ready")
         
         engine.add("6")
         XCTAssertTrue(engine.infix == "6")
-//        XCTAssertTrue(engine.postfix == "6")
+        XCTAssertTrue(engine.postfix == "6")
         
         engine.add("x")
         XCTAssertTrue(engine.infix == "6x")
-//        XCTAssertTrue(engine.postfix == "6 ? x")
+        XCTAssertTrue(engine.postfix == "6 ? x")
         
         engine.add("5")
         XCTAssertTrue(engine.infix == "6x5")
-//        XCTAssertTrue(engine.postfix == "6 5 x")
+        XCTAssertTrue(engine.postfix == "6 5 x")
         
         engine.add("+")
         XCTAssertTrue(engine.infix == "6x5+")
-//        XCTAssertTrue(engine.postfix == "6 5 x ? +")
+        XCTAssertTrue(engine.postfix == "6 5 x ? +")
         
         engine.add("3")
         XCTAssertTrue(engine.infix == "6x5+3")
-//        XCTAssertTrue(engine.postfix == "6 5 x 3 +")
+        XCTAssertTrue(engine.postfix == "6 5 x 3 +")
         
         engine.add("/")
         XCTAssertTrue(engine.infix == "6x5+3/")
-//        XCTAssertTrue(engine.postfix == "6 5 x 3 ? / +")
+        XCTAssertTrue(engine.postfix == "6 5 x 3 ? / +")
         
         engine.add("2")
         XCTAssertTrue(engine.infix == "6x5+3/2")
-//        XCTAssertTrue(engine.postfix == "6 5 x 3 2 / +")
+        XCTAssertTrue(engine.postfix == "6 5 x 3 2 / +")
         
         engine.add("-")
         XCTAssertTrue(engine.infix == "6x5+3/2-")
-//        XCTAssertTrue(engine.postfix == "6 5 x 3 2 / + ? -")
+        XCTAssertTrue(engine.postfix == "6 5 x 3 2 / + ? -")
         
         engine.add("6")
         XCTAssertTrue(engine.infix == "6x5+3/2-6")
-//        XCTAssertTrue(engine.postfix == "6 5 x 3 2 / +6 -")
+        XCTAssertTrue(engine.postfix == "6 5 x 3 2 / + 6 -")
         
         engine.add("=")
         XCTAssertTrue(engine.infix == "25.5")
-//        XCTAssertTrue(engine.postfix == "25.5")
+        XCTAssertTrue(engine.postfix == "25.5")
         
         engine.add("+")
         XCTAssertTrue(engine.infix == "25.5+")
-//        XCTAssertTrue(engine.postfix == "25.5 ? +")
+        XCTAssertTrue(engine.postfix == "25.5 ? +")
         
         engine.add("-")
         XCTAssertTrue(engine.infix == "25.5-")
-//        XCTAssertTrue(engine.postfix == "25.5 ? -")
+        XCTAssertTrue(engine.postfix == "25.5 ? -")
         
         engine.add("3")
         XCTAssertTrue(engine.infix == "25.5-3")
-//        XCTAssertTrue(engine.postfix == "25.5 3 -")
+        XCTAssertTrue(engine.postfix == "25.5 3 -")
         
         engine.add("0")
         XCTAssertTrue(engine.infix == "25.5-30")
-//        XCTAssertTrue(engine.postfix == "25.5 30 -")
+        XCTAssertTrue(engine.postfix == "25.5 30 -")
         
         engine.add("=")
         XCTAssertTrue(engine.infix == "-4.5")
-//        XCTAssertTrue(engine.postfix == "-4.5")
+        XCTAssertTrue(engine.postfix == "-4.5")
         
         engine.add("C")
         XCTAssertTrue(engine.infix == "Ready")
-//        XCTAssertTrue(engine.postfix == "Ready")
+        XCTAssertTrue(engine.postfix == "Ready")
     }
 }

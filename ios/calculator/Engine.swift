@@ -17,15 +17,22 @@ final class Engine {
         return inputs.joined(separator: "")
     }
     
-    //    var postfix: String {
-    //
-    //        guard output.count > 0 else { return "Ready" }
-    //
-    //        let shuntingYard = ShuntingYard()
-    //        shuntingYard.parse(infix: output)
-    //
-    //        return ShuntingYard().output.joined()
-    //    }
+    var postfix: String {
+
+        guard output.count > 0 else { return "Ready" }
+
+        let shuntingYard = ShuntingYard(input: inputs)
+        var postfix = shuntingYard.evaluate() + shuntingYard.operators.elements
+        
+        if postfix.count % 2 == 0 {
+            
+            let index = postfix.count - shuntingYard.operators.elements.count - 1
+            
+            postfix.insert("?", at: index)
+        }
+
+        return postfix.joined(separator: " ")
+    }
     
     private var inputs: [String] = []
     private var output: [String] = []
