@@ -39,9 +39,6 @@ final class ShuntingYard {
         
         switch token {
             
-        case "0", "1", "2", "3", "4", "5", "6", "7", "8", "9":
-            output.enqueue(token)
-            
         case "x", "/", "+", "-":
 
             var top = operators.peek()
@@ -57,7 +54,7 @@ final class ShuntingYard {
             operators.push(token)
             
         default:
-            fatalError()
+            output.enqueue(token)
         }
     }
 }

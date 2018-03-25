@@ -26,4 +26,9 @@ public class Stack<T> {
         
         return elements.first
     }
+    
+    func empty() {
+        
+        elements = []
+    }
 }
