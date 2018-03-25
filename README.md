@@ -40,6 +40,12 @@ Inputs:
 
 Note: one of the key inputs has been changed to protect the ~innocent~ interviews.
 
+Observations:
+- Display II shows a placeholder when the triplet of information is incomplete.
+- (12) shows that multiple operators in a row overwrite the previous.
+- (14, 15) shows that multiple operands in a row are concatenated.
+= The '=' operator executes the calculation.
+
 ## Journey
 
 - [ ] Setup project 
