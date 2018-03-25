@@ -22,17 +22,17 @@ class ShuntingYardTests: XCTestCase {
         
         let algo = ShuntingYard(input: ["3", "+", "4"])
         
-        algo.calculate()
+        let result = algo.evaluate()
         
-        XCTAssertEqual(["3", "4", "+"], algo.output.elements)
+        XCTAssertEqual(["3", "4", "+"], result)
     }
     
     func testComplex() {
         
         let algo = ShuntingYard(input: ["6", "x", "5", "+", "3", "/", "2", "-", "6"])
         
-        algo.calculate()
+        let result = algo.evaluate()
         
-        XCTAssertEqual(algo.output.elements.joined(), "65x32/+6-")
+        XCTAssertEqual(result, ["6", "5", "x", "3", "2", "/", "+", "6", "-"])
     }
 }

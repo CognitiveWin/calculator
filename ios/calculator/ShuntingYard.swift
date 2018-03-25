@@ -12,14 +12,14 @@ final class ShuntingYard {
     
     let input: [String]
     var output = Queue<String>()
-    private var operators = Stack<String>()
+    var operators = Stack<String>()
     
     init(input: [String]) {
         
         self.input = input
     }
     
-    func calculate() {
+    func evaluate() -> [String] {
         
         for token in input {
             process(token: token)
@@ -28,6 +28,8 @@ final class ShuntingYard {
         if let op = operators.pop() {
             output.enqueue(op)
         }
+        
+        return output.elements
     }
 
     func process(token: String) {
