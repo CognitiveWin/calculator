@@ -29,9 +29,6 @@ class Postfix {
         
         switch token {
             
-        case "0", "1", "2", "3", "4", "5", "6", "7", "8", "9":
-            output.push(token)
-            
         case "+":
             let o2 = output.pop()!
             let o1 = output.pop()!
@@ -61,7 +58,7 @@ class Postfix {
             output.push("\(value)")
             
         default:
-            fatalError()
+            output.push(token)
         }
     }
 }

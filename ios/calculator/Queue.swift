@@ -29,11 +29,16 @@ final class Queue<T> {
     
     func peek() -> T? {
         
-        return elements.first
+        return elements.last
     }
     
     var isEmpty: Bool {
         
         return elements.count == 0
+    }
+    
+    func empty() {
+    
+        elements = []
     }
 }
