@@ -24,6 +24,10 @@
 		D2CCA37E20651DCD00C3A522 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CCA37D20651DCD00C3A522 /* Queue.swift */; };
 		D2CCA37F20651DCD00C3A522 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CCA37D20651DCD00C3A522 /* Queue.swift */; };
 		D2CCA38020651DCD00C3A522 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CCA37D20651DCD00C3A522 /* Queue.swift */; };
+		D2CCA38220670B5C00C3A522 /* PostfixTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CCA38120670B5C00C3A522 /* PostfixTests.swift */; };
+		D2CCA38420670B6800C3A522 /* Postfix.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CCA38320670B6800C3A522 /* Postfix.swift */; };
+		D2CCA38520670B9A00C3A522 /* Postfix.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CCA38320670B6800C3A522 /* Postfix.swift */; };
+		D2CCA38620670B9B00C3A522 /* Postfix.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CCA38320670B6800C3A522 /* Postfix.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +65,8 @@
 		D2616A3D205E6E51001DC8CB /* ShuntingYard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShuntingYard.swift; sourceTree = "<group>"; };
 		D2CCA3792065180600C3A522 /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		D2CCA37D20651DCD00C3A522 /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
+		D2CCA38120670B5C00C3A522 /* PostfixTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostfixTests.swift; sourceTree = "<group>"; };
+		D2CCA38320670B6800C3A522 /* Postfix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Postfix.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +124,7 @@
 				D258335B2059224E00462E2F /* LaunchScreen.storyboard */,
 				D258335E2059224E00462E2F /* Info.plist */,
 				D2616A3D205E6E51001DC8CB /* ShuntingYard.swift */,
+				D2CCA38320670B6800C3A522 /* Postfix.swift */,
 				D2CCA3792065180600C3A522 /* Stack.swift */,
 				D2CCA37D20651DCD00C3A522 /* Queue.swift */,
 			);
@@ -127,9 +134,10 @@
 		D25833662059224E00462E2F /* calculatorTests */ = {
 			isa = PBXGroup;
 			children = (
+				D2616A3B205E6E3C001DC8CB /* ShuntingYardTests.swift */,
+				D2CCA38120670B5C00C3A522 /* PostfixTests.swift */,
 				D25833672059224E00462E2F /* calculatorTests.swift */,
 				D25833692059224E00462E2F /* Info.plist */,
-				D2616A3B205E6E3C001DC8CB /* ShuntingYardTests.swift */,
 			);
 			path = calculatorTests;
 			sourceTree = "<group>";
@@ -278,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2CCA37E20651DCD00C3A522 /* Queue.swift in Sources */,
+				D2CCA38420670B6800C3A522 /* Postfix.swift in Sources */,
 				D2CCA37A2065180600C3A522 /* Stack.swift in Sources */,
 				D25833552059224E00462E2F /* ViewController.swift in Sources */,
 				D25833532059224E00462E2F /* AppDelegate.swift in Sources */,
@@ -290,9 +299,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2CCA37F20651DCD00C3A522 /* Queue.swift in Sources */,
+				D2CCA38220670B5C00C3A522 /* PostfixTests.swift in Sources */,
 				D2CCA37B2065180600C3A522 /* Stack.swift in Sources */,
 				D25833682059224E00462E2F /* calculatorTests.swift in Sources */,
 				D2616A3C205E6E3C001DC8CB /* ShuntingYardTests.swift in Sources */,
+				D2CCA38520670B9A00C3A522 /* Postfix.swift in Sources */,
 				D2616A40205E6E5B001DC8CB /* ShuntingYard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,6 +316,7 @@
 				D2CCA37C20651D7500C3A522 /* Stack.swift in Sources */,
 				D2616A3F205E6E5A001DC8CB /* ShuntingYard.swift in Sources */,
 				D2CCA38020651DCD00C3A522 /* Queue.swift in Sources */,
+				D2CCA38620670B9B00C3A522 /* Postfix.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
