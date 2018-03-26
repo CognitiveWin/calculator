@@ -65,16 +65,7 @@ I did a little bit of searching to discover that Display II is displaying postfi
 - multiple operations follow the second operand
 - parantheses are not required
 
-This last bit is interesting. Take, for example, the test case in step 10 before the equality.
-
-6x5+3÷2-6
-
-This can be calculated in various ways:
-
-- Postfix: ((6x5)+(3/2)) - 6 = (30 + 1.5) -6 = 25.5
-- Infix: (((6*5)+3)/2)-6 = ((30+3)/2)-6 = (33/2)-6 = ((33)/2)-6 = 16.5-6 = 10.6
-
-What we can tell from this, is the interview challenge is expecting a postfix approach to calculation. Which is a shame, because otherwise I could have used NSExpressions to do some of this work.
+What we can tell from this, is the interview challenge is expecting an explicit postfix approach to calculation. Which is a shame, because otherwise I could have used `NSExpression` to do some of this work. NSExpression does convert infix to postfix during its evaluation.
 
 The scenarios, best described by (Tutorials Point)[https://www.tutorialspoint.com/data_structures_algorithms/expression_parsing.htm] are:
 
