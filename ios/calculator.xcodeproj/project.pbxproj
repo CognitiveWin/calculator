@@ -7,9 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D217858A2067B81300F49D72 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D21785892067B81300F49D72 /* SnapKit.framework */; };
+		D217858C2067BAAD00F49D72 /* UIViewController+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D217858B2067BAAD00F49D72 /* UIViewController+Layout.swift */; };
+		D21785912067BCFA00F49D72 /* PadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21785902067BCFA00F49D72 /* PadViewController.swift */; };
+		D21785932067BDD000F49D72 /* PadViewController+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21785922067BDD000F49D72 /* PadViewController+Layout.swift */; };
+		D21785952068339F00F49D72 /* OperatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21785942068339F00F49D72 /* OperatorViewController.swift */; };
+		D2178597206833D000F49D72 /* OperatorViewController+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2178596206833D000F49D72 /* OperatorViewController+Layout.swift */; };
+		D217859A2068372E00F49D72 /* UIView+Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21785992068372E00F49D72 /* UIView+Container.swift */; };
+		D217859C2068F01700F49D72 /* CalculatorInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D217859B2068F01700F49D72 /* CalculatorInteractor.swift */; };
+		D217859D2068F01700F49D72 /* CalculatorInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D217859B2068F01700F49D72 /* CalculatorInteractor.swift */; };
 		D25833532059224E00462E2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25833522059224E00462E2F /* AppDelegate.swift */; };
 		D25833552059224E00462E2F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25833542059224E00462E2F /* ViewController.swift */; };
-		D25833582059224E00462E2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D25833562059224E00462E2F /* Main.storyboard */; };
 		D258335A2059224E00462E2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D25833592059224E00462E2F /* Assets.xcassets */; };
 		D258335D2059224E00462E2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D258335B2059224E00462E2F /* LaunchScreen.storyboard */; };
 		D25833732059224E00462E2F /* calculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25833722059224E00462E2F /* calculatorUITests.swift */; };
@@ -31,7 +39,6 @@
 		D2CCA39020673F2900C3A522 /* Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CCA38E20673F2900C3A522 /* Engine.swift */; };
 		D2CCA39120673F2900C3A522 /* Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CCA38E20673F2900C3A522 /* Engine.swift */; };
 		D2CCA39320673F5A00C3A522 /* EngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CCA39220673F5A00C3A522 /* EngineTests.swift */; };
-		D2CCA39420673F5A00C3A522 /* EngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CCA39220673F5A00C3A522 /* EngineTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,10 +59,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D21785892067B81300F49D72 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
+		D217858B2067BAAD00F49D72 /* UIViewController+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Layout.swift"; sourceTree = "<group>"; };
+		D21785902067BCFA00F49D72 /* PadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PadViewController.swift; sourceTree = "<group>"; };
+		D21785922067BDD000F49D72 /* PadViewController+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PadViewController+Layout.swift"; sourceTree = "<group>"; };
+		D21785942068339F00F49D72 /* OperatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperatorViewController.swift; sourceTree = "<group>"; };
+		D2178596206833D000F49D72 /* OperatorViewController+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OperatorViewController+Layout.swift"; sourceTree = "<group>"; };
+		D21785992068372E00F49D72 /* UIView+Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Container.swift"; sourceTree = "<group>"; };
+		D217859B2068F01700F49D72 /* CalculatorInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorInteractor.swift; sourceTree = "<group>"; };
 		D258334F2059224E00462E2F /* calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D25833522059224E00462E2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D25833542059224E00462E2F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D25833572059224E00462E2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D25833592059224E00462E2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D258335C2059224E00462E2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D258335E2059224E00462E2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -72,6 +86,7 @@
 		D2CCA38320670B6800C3A522 /* Postfix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Postfix.swift; sourceTree = "<group>"; };
 		D2CCA38E20673F2900C3A522 /* Engine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Engine.swift; sourceTree = "<group>"; };
 		D2CCA39220673F5A00C3A522 /* EngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EngineTests.swift; sourceTree = "<group>"; };
+		D2CCA3962067B50500C3A522 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = ../Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D217858A2067B81300F49D72 /* SnapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +115,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D217858D2067BCB600F49D72 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				D217858E2067BCBC00F49D72 /* Calculator */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		D217858E2067BCBC00F49D72 /* Calculator */ = {
+			isa = PBXGroup;
+			children = (
+				D25833542059224E00462E2F /* ViewController.swift */,
+				D217858B2067BAAD00F49D72 /* UIViewController+Layout.swift */,
+				D21785902067BCFA00F49D72 /* PadViewController.swift */,
+				D21785922067BDD000F49D72 /* PadViewController+Layout.swift */,
+				D21785942068339F00F49D72 /* OperatorViewController.swift */,
+				D2178596206833D000F49D72 /* OperatorViewController+Layout.swift */,
+				D217859B2068F01700F49D72 /* CalculatorInteractor.swift */,
+			);
+			path = Calculator;
+			sourceTree = "<group>";
+		};
+		D217858F2067BCC900F49D72 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D2CCA3792065180600C3A522 /* Stack.swift */,
+				D2CCA37D20651DCD00C3A522 /* Queue.swift */,
+				D2CCA38320670B6800C3A522 /* Postfix.swift */,
+				D2616A3D205E6E51001DC8CB /* ShuntingYard.swift */,
+				D2CCA38E20673F2900C3A522 /* Engine.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D21785982068371400F49D72 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				D21785992068372E00F49D72 /* UIView+Container.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
 		D25833462059224E00462E2F = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +164,7 @@
 				D25833662059224E00462E2F /* calculatorTests */,
 				D25833712059224E00462E2F /* calculatorUITests */,
 				D25833502059224E00462E2F /* Products */,
+				D2CCA3952067B50400C3A522 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -122,17 +181,13 @@
 		D25833512059224E00462E2F /* calculator */ = {
 			isa = PBXGroup;
 			children = (
+				D217858F2067BCC900F49D72 /* Model */,
+				D217858D2067BCB600F49D72 /* Module */,
+				D21785982068371400F49D72 /* Support */,
 				D25833522059224E00462E2F /* AppDelegate.swift */,
-				D25833542059224E00462E2F /* ViewController.swift */,
-				D25833562059224E00462E2F /* Main.storyboard */,
 				D25833592059224E00462E2F /* Assets.xcassets */,
 				D258335B2059224E00462E2F /* LaunchScreen.storyboard */,
 				D258335E2059224E00462E2F /* Info.plist */,
-				D2CCA3792065180600C3A522 /* Stack.swift */,
-				D2CCA37D20651DCD00C3A522 /* Queue.swift */,
-				D2CCA38320670B6800C3A522 /* Postfix.swift */,
-				D2616A3D205E6E51001DC8CB /* ShuntingYard.swift */,
-				D2CCA38E20673F2900C3A522 /* Engine.swift */,
 			);
 			path = calculator;
 			sourceTree = "<group>";
@@ -157,6 +212,15 @@
 			path = calculatorUITests;
 			sourceTree = "<group>";
 		};
+		D2CCA3952067B50400C3A522 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D21785892067B81300F49D72 /* SnapKit.framework */,
+				D2CCA3962067B50500C3A522 /* SnapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -167,6 +231,7 @@
 				D258334B2059224E00462E2F /* Sources */,
 				D258334C2059224E00462E2F /* Frameworks */,
 				D258334D2059224E00462E2F /* Resources */,
+				D2CCA3982067B52400C3A522 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -266,7 +331,6 @@
 			files = (
 				D258335D2059224E00462E2F /* LaunchScreen.storyboard in Resources */,
 				D258335A2059224E00462E2F /* Assets.xcassets in Resources */,
-				D25833582059224E00462E2F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,18 +350,44 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		D2CCA3982067B52400C3A522 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
+			);
+			name = Carthage;
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D258334B2059224E00462E2F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D217859C2068F01700F49D72 /* CalculatorInteractor.swift in Sources */,
 				D2CCA37E20651DCD00C3A522 /* Queue.swift in Sources */,
 				D2CCA38420670B6800C3A522 /* Postfix.swift in Sources */,
 				D2CCA37A2065180600C3A522 /* Stack.swift in Sources */,
+				D217859A2068372E00F49D72 /* UIView+Container.swift in Sources */,
 				D25833552059224E00462E2F /* ViewController.swift in Sources */,
+				D21785932067BDD000F49D72 /* PadViewController+Layout.swift in Sources */,
+				D21785952068339F00F49D72 /* OperatorViewController.swift in Sources */,
 				D2CCA38F20673F2900C3A522 /* Engine.swift in Sources */,
 				D25833532059224E00462E2F /* AppDelegate.swift in Sources */,
+				D217858C2067BAAD00F49D72 /* UIViewController+Layout.swift in Sources */,
 				D2616A3E205E6E51001DC8CB /* ShuntingYard.swift in Sources */,
+				D2178597206833D000F49D72 /* OperatorViewController+Layout.swift in Sources */,
+				D21785912067BCFA00F49D72 /* PadViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +396,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2CCA37F20651DCD00C3A522 /* Queue.swift in Sources */,
+				D217859D2068F01700F49D72 /* CalculatorInteractor.swift in Sources */,
 				D2CCA38220670B5C00C3A522 /* PostfixTests.swift in Sources */,
 				D2CCA39320673F5A00C3A522 /* EngineTests.swift in Sources */,
 				D2CCA37B2065180600C3A522 /* Stack.swift in Sources */,
@@ -323,7 +414,6 @@
 				D25833732059224E00462E2F /* calculatorUITests.swift in Sources */,
 				D2CCA37C20651D7500C3A522 /* Stack.swift in Sources */,
 				D2616A3F205E6E5A001DC8CB /* ShuntingYard.swift in Sources */,
-				D2CCA39420673F5A00C3A522 /* EngineTests.swift in Sources */,
 				D2CCA39120673F2900C3A522 /* Engine.swift in Sources */,
 				D2CCA38020651DCD00C3A522 /* Queue.swift in Sources */,
 				D2CCA38620670B9B00C3A522 /* Postfix.swift in Sources */,
@@ -346,14 +436,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		D25833562059224E00462E2F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D25833572059224E00462E2F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D258335B2059224E00462E2F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -478,7 +560,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S24AE5VY3Q;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = calculator/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cognitivewin.calculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -493,7 +580,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S24AE5VY3Q;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = calculator/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cognitivewin.calculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
