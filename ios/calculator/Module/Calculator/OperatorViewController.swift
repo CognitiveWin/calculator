@@ -15,7 +15,9 @@ protocol OperatorViewControllerDelegate: class {
 
 final class OperatorViewController: UIViewController {
     
-    public let addButton: UIView = {
+    private var buttonMapping: [UIButton: String] = [:]
+    
+    public let addButton: UIButton = {
         
         let button = UIButton(type: .custom)
         button.setTitle("+", for: .normal)
@@ -25,7 +27,7 @@ final class OperatorViewController: UIViewController {
         return button
     }()
     
-    public let subtractButton: UIView = {
+    public let subtractButton: UIButton = {
         
         let button = UIButton(type: .custom)
         button.setTitle("-", for: .normal)
@@ -35,7 +37,7 @@ final class OperatorViewController: UIViewController {
         return button
     }()
     
-    public let multiplyButton: UIView = {
+    public let multiplyButton: UIButton = {
         
         let button = UIButton(type: .custom)
         button.setTitle("x", for: .normal)
@@ -45,7 +47,7 @@ final class OperatorViewController: UIViewController {
         return button
     }()
 
-    public let divideButton: UIView = {
+    public let divideButton: UIButton = {
         
         let button = UIButton(type: .custom)
         button.setTitle("÷", for: .normal)
@@ -55,7 +57,7 @@ final class OperatorViewController: UIViewController {
         return button
     }()
 
-    public let equalButton: UIView = {
+    public let equalButton: UIButton = {
         
         let button = UIButton(type: .custom)
         button.setTitle("=", for: .normal)
@@ -72,30 +74,21 @@ final class OperatorViewController: UIViewController {
         
         view.backgroundColor = .white
         
+        buttonMapping[addButton] = "+"
+        buttonMapping[subtractButton] = "-"
+        buttonMapping[multiplyButton] = "x"
+        buttonMapping[divideButton] = "/"
+        buttonMapping[equalButton] = "="
+        
         layout()
     }
     
     @objc func didTapButton(_ button: UIButton) {
         
-        switch button {
-            
-        case addButton:
-            delegate?.didSelectValue(value: "+")
-            
-        case subtractButton:
-            delegate?.didSelectValue(value: "-")
-            
-        case multiplyButton:
-            delegate?.didSelectValue(value: "x")
-            
-        case divideButton:
-            delegate?.didSelectValue(value: "/")
-            
-        case equalButton:
-            delegate?.didSelectValue(value: "=")
-            
-        default:
-            break
+        guard let key = buttonMapping[button] else {
+            fatalError()
         }
+        
+        delegate?.didSelectValue(value: key)
     }
 }

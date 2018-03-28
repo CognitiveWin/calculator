@@ -16,8 +16,9 @@ protocol PadViewControllerDelegate: class {
 final class PadViewController: UIViewController {
     
     weak var delegate: PadViewControllerDelegate?
+    private var buttonMapping: [UIButton: String] = [:]
     
-    public let sevenButton: UIView = {
+    public let sevenButton: UIButton = {
         
         let button = UIButton(type: .custom)
         button.setTitle("7", for: .normal)
@@ -27,7 +28,7 @@ final class PadViewController: UIViewController {
         return button
     }()
 
-    public let eightButton: UIView = {
+    public let eightButton: UIButton = {
         
         let button = UIButton(type: .custom)
         button.setTitle("8", for: .normal)
@@ -37,7 +38,7 @@ final class PadViewController: UIViewController {
         return button
     }()
 
-    public let nineButton: UIView = {
+    public let nineButton: UIButton = {
         
         let button = UIButton(type: .custom)
         button.setTitle("9", for: .normal)
@@ -47,7 +48,7 @@ final class PadViewController: UIViewController {
         return button
     }()
 
-    public let fourButton: UIView = {
+    public let fourButton: UIButton = {
         
         let button = UIButton(type: .custom)
         button.setTitle("4", for: .normal)
@@ -57,7 +58,7 @@ final class PadViewController: UIViewController {
         return button
     }()
 
-    public let fiveButton: UIView = {
+    public let fiveButton: UIButton = {
         
         let button = UIButton(type: .custom)
         button.setTitle("5", for: .normal)
@@ -67,7 +68,7 @@ final class PadViewController: UIViewController {
         return button
     }()
 
-    public let sixButton: UIView = {
+    public let sixButton: UIButton = {
         
         let button = UIButton(type: .custom)
         button.setTitle("6", for: .normal)
@@ -78,7 +79,7 @@ final class PadViewController: UIViewController {
     }()
 
 
-    public let oneButton: UIView = {
+    public let oneButton: UIButton = {
         
         let button = UIButton(type: .custom)
         button.setTitle("1", for: .normal)
@@ -88,7 +89,7 @@ final class PadViewController: UIViewController {
         return button
     }()
     
-    public let twoButton: UIView = {
+    public let twoButton: UIButton = {
         
         let button = UIButton(type: .custom)
         button.setTitle("2", for: .normal)
@@ -98,7 +99,7 @@ final class PadViewController: UIViewController {
         return button
     }()
     
-    public let threeButton: UIView = {
+    public let threeButton: UIButton = {
         
         let button = UIButton(type: .custom)
         button.setTitle("3", for: .normal)
@@ -108,7 +109,7 @@ final class PadViewController: UIViewController {
         return button
     }()
     
-    public let zeroButton: UIView = {
+    public let zeroButton: UIButton = {
         
         let button = UIButton(type: .custom)
         button.setTitle("0", for: .normal)
@@ -118,7 +119,7 @@ final class PadViewController: UIViewController {
         return button
     }()
     
-    public let cancelButton: UIView = {
+    public let cancelButton: UIButton = {
         
         let button = UIButton(type: .custom)
         button.setTitle("C", for: .normal)
@@ -131,38 +132,27 @@ final class PadViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        buttonMapping[nineButton] = "9"
+        buttonMapping[eightButton] = "8"
+        buttonMapping[sevenButton] = "7"
+        buttonMapping[sixButton] = "6"
+        buttonMapping[fiveButton] = "5"
+        buttonMapping[fourButton] = "4"
+        buttonMapping[threeButton] = "3"
+        buttonMapping[twoButton] = "2"
+        buttonMapping[oneButton] = "1"
+        buttonMapping[zeroButton] = "0"
+        buttonMapping[cancelButton] = "C"
+
         layout()
     }
     
     @objc func didTapButton(_ button: UIButton) {
         
-        switch button {
-            
-        case nineButton:
-            delegate?.didSelectValue(value: "9")
-        case eightButton:
-            delegate?.didSelectValue(value: "8")
-        case sevenButton:
-            delegate?.didSelectValue(value: "7")
-        case sixButton:
-            delegate?.didSelectValue(value: "6")
-        case fiveButton:
-            delegate?.didSelectValue(value: "5")
-        case fourButton:
-            delegate?.didSelectValue(value: "4")
-        case threeButton:
-            delegate?.didSelectValue(value: "3")
-        case twoButton:
-            delegate?.didSelectValue(value: "2")
-        case oneButton:
-            delegate?.didSelectValue(value: "1")
-        case zeroButton:
-            delegate?.didSelectValue(value: "0")
-        case cancelButton:
-            delegate?.didSelectValue(value: "C")
-
-        default:
+        guard let key = buttonMapping[button] else {
             fatalError()
         }
+        
+        delegate?.didSelectValue(value: key)
     }
 }
