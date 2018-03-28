@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension OperatorViewController {
+extension OperatorViewController: Layout {
     
     func layout() {
         

@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension PadViewController {
+extension PadViewController: Layout {
     
     func layout() {
         
