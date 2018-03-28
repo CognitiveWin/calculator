@@ -22,8 +22,8 @@ final class PadViewController: UIViewController {
         
         let button = UIButton(type: .custom)
         button.setTitle("7", for: .normal)
-        button.backgroundColor = .blue
         button.addTarget(self, action: #selector(didTapButton(_:)), for: .touchUpInside)
+        button.style.padButton()
 
         return button
     }()
@@ -32,7 +32,7 @@ final class PadViewController: UIViewController {
         
         let button = UIButton(type: .custom)
         button.setTitle("8", for: .normal)
-        button.backgroundColor = .blue
+        button.style.padButton()
         button.addTarget(self, action: #selector(didTapButton(_:)), for: .touchUpInside)
 
         return button
@@ -42,7 +42,7 @@ final class PadViewController: UIViewController {
         
         let button = UIButton(type: .custom)
         button.setTitle("9", for: .normal)
-        button.backgroundColor = .blue
+        button.style.padButton()
         button.addTarget(self, action: #selector(didTapButton(_:)), for: .touchUpInside)
         
         return button
@@ -52,7 +52,7 @@ final class PadViewController: UIViewController {
         
         let button = UIButton(type: .custom)
         button.setTitle("4", for: .normal)
-        button.backgroundColor = .blue
+        button.style.padButton()
         button.addTarget(self, action: #selector(didTapButton(_:)), for: .touchUpInside)
 
         return button
@@ -62,7 +62,7 @@ final class PadViewController: UIViewController {
         
         let button = UIButton(type: .custom)
         button.setTitle("5", for: .normal)
-        button.backgroundColor = .blue
+        button.style.padButton()
         button.addTarget(self, action: #selector(didTapButton(_:)), for: .touchUpInside)
 
         return button
@@ -72,7 +72,7 @@ final class PadViewController: UIViewController {
         
         let button = UIButton(type: .custom)
         button.setTitle("6", for: .normal)
-        button.backgroundColor = .blue
+        button.style.padButton()
         button.addTarget(self, action: #selector(didTapButton(_:)), for: .touchUpInside)
 
         return button
@@ -83,7 +83,7 @@ final class PadViewController: UIViewController {
         
         let button = UIButton(type: .custom)
         button.setTitle("1", for: .normal)
-        button.backgroundColor = .blue
+        button.style.padButton()
         button.addTarget(self, action: #selector(didTapButton(_:)), for: .touchUpInside)
 
         return button
@@ -93,7 +93,7 @@ final class PadViewController: UIViewController {
         
         let button = UIButton(type: .custom)
         button.setTitle("2", for: .normal)
-        button.backgroundColor = .blue
+        button.style.padButton()
         button.addTarget(self, action: #selector(didTapButton(_:)), for: .touchUpInside)
 
         return button
@@ -103,7 +103,7 @@ final class PadViewController: UIViewController {
         
         let button = UIButton(type: .custom)
         button.setTitle("3", for: .normal)
-        button.backgroundColor = .blue
+        button.style.padButton()
         button.addTarget(self, action: #selector(didTapButton(_:)), for: .touchUpInside)
 
         return button
@@ -113,7 +113,7 @@ final class PadViewController: UIViewController {
         
         let button = UIButton(type: .custom)
         button.setTitle("0", for: .normal)
-        button.backgroundColor = .blue
+        button.style.padButton()
         button.addTarget(self, action: #selector(didTapButton(_:)), for: .touchUpInside)
         
         return button
@@ -123,7 +123,7 @@ final class PadViewController: UIViewController {
         
         let button = UIButton(type: .custom)
         button.setTitle("C", for: .normal)
-        button.backgroundColor = .blue
+        button.style.padButton()
         button.addTarget(self, action: #selector(didTapButton(_:)), for: .touchUpInside)
         
         return button
@@ -144,7 +144,7 @@ final class PadViewController: UIViewController {
         buttonMapping[zeroButton] = "0"
         buttonMapping[cancelButton] = "C"
 
-        layout()
+        layout(options: LayoutOptions())
     }
     
     @objc func didTapButton(_ button: UIButton) {

@@ -10,7 +10,7 @@ import Foundation
 
 extension PadViewController: Layout {
     
-    func layout() {
+    func layout(options: LayoutOptions) {
         
         view.addSubview(cancelButton)
         view.addSubview(zeroButton)

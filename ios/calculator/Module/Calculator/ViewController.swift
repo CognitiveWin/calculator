@@ -16,10 +16,7 @@ final class ViewController: UIViewController {
     let infixDisplay: UILabel = {
         
         let label = UILabel()
-        label.backgroundColor = .red
-        label.textAlignment = .right
-        label.textColor = .white
-        label.font = UIFont(name: "Verdana-Italic", size: 20)
+        label.style.display()
         
         return label
     }()
@@ -27,10 +24,7 @@ final class ViewController: UIViewController {
     let postfixDisplay: UILabel = {
         
         let label = UILabel()
-        label.backgroundColor = .red
-        label.textAlignment = .right
-        label.textColor = .white
-        label.font = UIFont(name: "Verdana-Italic", size: 20)
+        label.style.display()
         
         return label
     }()
@@ -79,7 +73,7 @@ final class ViewController: UIViewController {
         operatorViewController.delegate = self
         add(viewController: operatorViewController, container: operatorView)
         
-        layout()
+        layout(options: LayoutOptions())
     }
 }
 

@@ -10,5 +10,12 @@ import Foundation
 
 protocol Layout {
     
-    func layout()
+    func layout(options: LayoutOptions)
+}
+
+final class LayoutOptions {
+    
+    var padding: Int {
+        return 5
+    }
 }

@@ -21,7 +21,7 @@ final class OperatorViewController: UIViewController {
         
         let button = UIButton(type: .custom)
         button.setTitle("+", for: .normal)
-        button.backgroundColor = .blue
+        button.style.padButton()
         button.addTarget(self, action: #selector(didTapButton(_:)), for: .touchUpInside)
         
         return button
@@ -31,7 +31,7 @@ final class OperatorViewController: UIViewController {
         
         let button = UIButton(type: .custom)
         button.setTitle("-", for: .normal)
-        button.backgroundColor = .blue
+        button.style.padButton()
         button.addTarget(self, action: #selector(didTapButton(_:)), for: .touchUpInside)
         
         return button
@@ -41,7 +41,7 @@ final class OperatorViewController: UIViewController {
         
         let button = UIButton(type: .custom)
         button.setTitle("x", for: .normal)
-        button.backgroundColor = .blue
+        button.style.padButton()
         button.addTarget(self, action: #selector(didTapButton(_:)), for: .touchUpInside)
         
         return button
@@ -51,7 +51,7 @@ final class OperatorViewController: UIViewController {
         
         let button = UIButton(type: .custom)
         button.setTitle("÷", for: .normal)
-        button.backgroundColor = .blue
+        button.style.padButton()
         button.addTarget(self, action: #selector(didTapButton(_:)), for: .touchUpInside)
         
         return button
@@ -61,7 +61,7 @@ final class OperatorViewController: UIViewController {
         
         let button = UIButton(type: .custom)
         button.setTitle("=", for: .normal)
-        button.backgroundColor = .blue
+        button.style.padButton()
         button.addTarget(self, action: #selector(didTapButton(_:)), for: .touchUpInside)
         
         return button
@@ -80,7 +80,7 @@ final class OperatorViewController: UIViewController {
         buttonMapping[divideButton] = "/"
         buttonMapping[equalButton] = "="
         
-        layout()
+        layout(options: LayoutOptions())
     }
     
     @objc func didTapButton(_ button: UIButton) {

@@ -10,7 +10,7 @@ import Foundation
 
 extension OperatorViewController: Layout {
     
-    func layout() {
+    func layout(options: LayoutOptions) {
         
         view.addSubview(addButton)
         view.addSubview(subtractButton)
@@ -50,7 +50,8 @@ extension OperatorViewController: Layout {
 
             make.top.equalTo(divideButton.snp.bottom)
             make.centerX.equalTo(view)
-            make.height.width.equalTo(40)
+            make.width.equalTo(40)
+            make.height.equalTo(80)
         }
     }
 }
