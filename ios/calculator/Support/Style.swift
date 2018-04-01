@@ -43,7 +43,8 @@ extension Style where T: UIButton {
         
         assert(base.buttonType == .custom)
         
-        base.backgroundColor = .blue
+        base.backgroundColor = .clear
+        base.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
     }
 }
 
@@ -55,9 +56,10 @@ extension Style where T: UILabel {
     
     func display() {
         
-        base.backgroundColor = .red
         base.textAlignment = .right
         base.textColor = .white
-        base.font = UIFont(name: "Verdana-Italic", size: 20)
+        base.font = UIFont(name: "Verdana-Italic", size: 30)
+        base.layer.cornerRadius = 5.0
+        base.clipsToBounds = true
     }
 }

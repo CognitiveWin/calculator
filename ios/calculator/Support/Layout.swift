@@ -18,4 +18,9 @@ final class LayoutOptions {
     var padding: Int {
         return 5
     }
+    
+    var buttonRatio: Float {
+        
+        return 2.0 / 3.0
+    }
 }

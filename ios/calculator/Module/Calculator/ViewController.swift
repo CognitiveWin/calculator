@@ -13,6 +13,13 @@ final class ViewController: UIViewController {
     
     let interactor: CalculatorInteractor = CalculatorInteractor()
     
+    let displayView: UIView = {
+        
+        let view = UIView()
+        
+        return view
+    }()
+    
     let infixDisplay: UILabel = {
         
         let label = UILabel()
@@ -32,7 +39,7 @@ final class ViewController: UIViewController {
     let padView: UIView = {
        
         let view = UIView()
-        view.backgroundColor = .purple
+        view.backgroundColor = .clear
         
         return view;
     }()
@@ -40,7 +47,7 @@ final class ViewController: UIViewController {
     let padViewController: PadViewController = {
         
         let viewController = PadViewController()
-        viewController.view.backgroundColor = .purple
+        viewController.view.backgroundColor = .clear
         
         return viewController
     }()
@@ -48,7 +55,7 @@ final class ViewController: UIViewController {
     let operatorView: UIView = {
         
         let view = UIView()
-        view.backgroundColor = .orange
+        view.backgroundColor = .clear
         
         return view
     }()
@@ -63,7 +70,10 @@ final class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .yellow
+        let layer = CAGradientLayer()
+        layer.frame = view.bounds
+        layer.colors = [UIColor.red.cgColor, UIColor.green.cgColor]
+        view.layer.addSublayer(layer)
         
         interactor.delegate = self
         

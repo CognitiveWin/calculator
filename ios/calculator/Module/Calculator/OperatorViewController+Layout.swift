@@ -22,36 +22,40 @@ extension OperatorViewController: Layout {
             
             make.top.equalTo(view)
             make.centerX.equalTo(view)
-            make.height.width.equalTo(40)
+            make.width.equalTo(view.snp.width)
+            make.height.equalTo(view.snp.width).multipliedBy(options.buttonRatio)
         }
         
         subtractButton.snp.makeConstraints { make in
 
             make.top.equalTo(addButton.snp.bottom)
             make.centerX.equalTo(view)
-            make.height.width.equalTo(40)
+            make.width.equalTo(view.snp.width)
+            make.height.equalTo(view.snp.width).multipliedBy(options.buttonRatio)
         }
 
         multiplyButton.snp.makeConstraints { make in
 
             make.top.equalTo(subtractButton.snp.bottom)
             make.centerX.equalTo(view)
-            make.height.width.equalTo(40)
+            make.width.equalTo(view.snp.width)
+            make.height.equalTo(view.snp.width).multipliedBy(options.buttonRatio)
         }
 
         divideButton.snp.makeConstraints { make in
 
             make.top.equalTo(multiplyButton.snp.bottom)
             make.centerX.equalTo(view)
-            make.height.width.equalTo(40)
+            make.width.equalTo(view.snp.width)
+            make.height.equalTo(view.snp.width).multipliedBy(options.buttonRatio)
         }
 
         equalButton.snp.makeConstraints { make in
 
             make.top.equalTo(divideButton.snp.bottom)
             make.centerX.equalTo(view)
-            make.width.equalTo(40)
-            make.height.equalTo(80)
+            make.width.equalTo(view.snp.width)
+            make.height.equalTo(view.snp.width).multipliedBy(options.buttonRatio * 2.0)
         }
     }
 }
