@@ -13,13 +13,17 @@ final class ViewController: UIViewController {
     
     let interactor: CalculatorInteractor = CalculatorInteractor()
     
+    let displayView: UIView = {
+        
+        let view = UIView()
+        
+        return view
+    }()
+    
     let infixDisplay: UILabel = {
         
         let label = UILabel()
-        label.backgroundColor = .red
-        label.textAlignment = .right
-        label.textColor = .white
-        label.font = UIFont(name: "Verdana-Italic", size: 20)
+        label.style.display()
         
         return label
     }()
@@ -27,10 +31,7 @@ final class ViewController: UIViewController {
     let postfixDisplay: UILabel = {
         
         let label = UILabel()
-        label.backgroundColor = .red
-        label.textAlignment = .right
-        label.textColor = .white
-        label.font = UIFont(name: "Verdana-Italic", size: 20)
+        label.style.display()
         
         return label
     }()
@@ -38,7 +39,7 @@ final class ViewController: UIViewController {
     let padView: UIView = {
        
         let view = UIView()
-        view.backgroundColor = .purple
+        view.backgroundColor = .clear
         
         return view;
     }()
@@ -46,7 +47,7 @@ final class ViewController: UIViewController {
     let padViewController: PadViewController = {
         
         let viewController = PadViewController()
-        viewController.view.backgroundColor = .purple
+        viewController.view.backgroundColor = .clear
         
         return viewController
     }()
@@ -54,7 +55,7 @@ final class ViewController: UIViewController {
     let operatorView: UIView = {
         
         let view = UIView()
-        view.backgroundColor = .orange
+        view.backgroundColor = .clear
         
         return view
     }()
@@ -69,7 +70,10 @@ final class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .yellow
+        let layer = CAGradientLayer()
+        layer.frame = view.bounds
+        layer.colors = [UIColor.red.cgColor, UIColor.green.cgColor]
+        view.layer.addSublayer(layer)
         
         interactor.delegate = self
         
@@ -79,7 +83,7 @@ final class ViewController: UIViewController {
         operatorViewController.delegate = self
         add(viewController: operatorViewController, container: operatorView)
         
-        layout()
+        layout(options: LayoutOptions())
     }
 }
 
