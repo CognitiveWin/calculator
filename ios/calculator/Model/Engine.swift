@@ -48,13 +48,14 @@ final class Engine {
         case "=":
             let algo = ShuntingYard(input: inputs)
             let postfix = algo.evaluate()
+            let result = Postfix(inputs: postfix).evaluate()
             
-            let expression = Postfix(inputs: postfix)
-            let result = expression.evaluate()
-            
-            inputs = []
-            inputs.append(result.first!)
-            output = [result.first!]
+            if let first = result.first {
+
+                inputs = []
+                inputs.append(first)
+                output = [first]
+            }
             
             break
             
