@@ -15,51 +15,53 @@ protocol OperatorViewControllerDelegate: class {
 
 final class OperatorViewController: UIViewController {
     
-    public let addButton: UIView = {
+    private var buttonMapping: [UIButton: String] = [:]
+    
+    public let addButton: UIButton = {
         
         let button = UIButton(type: .custom)
         button.setTitle("+", for: .normal)
-        button.backgroundColor = .blue
+        button.style.padButton()
         button.addTarget(self, action: #selector(didTapButton(_:)), for: .touchUpInside)
         
         return button
     }()
     
-    public let subtractButton: UIView = {
+    public let subtractButton: UIButton = {
         
         let button = UIButton(type: .custom)
         button.setTitle("-", for: .normal)
-        button.backgroundColor = .blue
+        button.style.padButton()
         button.addTarget(self, action: #selector(didTapButton(_:)), for: .touchUpInside)
         
         return button
     }()
     
-    public let multiplyButton: UIView = {
+    public let multiplyButton: UIButton = {
         
         let button = UIButton(type: .custom)
         button.setTitle("x", for: .normal)
-        button.backgroundColor = .blue
+        button.style.padButton()
         button.addTarget(self, action: #selector(didTapButton(_:)), for: .touchUpInside)
         
         return button
     }()
 
-    public let divideButton: UIView = {
+    public let divideButton: UIButton = {
         
         let button = UIButton(type: .custom)
         button.setTitle("÷", for: .normal)
-        button.backgroundColor = .blue
+        button.style.padButton()
         button.addTarget(self, action: #selector(didTapButton(_:)), for: .touchUpInside)
         
         return button
     }()
 
-    public let equalButton: UIView = {
+    public let equalButton: UIButton = {
         
         let button = UIButton(type: .custom)
         button.setTitle("=", for: .normal)
-        button.backgroundColor = .blue
+        button.style.padButton()
         button.addTarget(self, action: #selector(didTapButton(_:)), for: .touchUpInside)
         
         return button
@@ -70,32 +72,23 @@ final class OperatorViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .white
+        view.backgroundColor = .clear
         
-        layout()
+        buttonMapping[addButton] = "+"
+        buttonMapping[subtractButton] = "-"
+        buttonMapping[multiplyButton] = "x"
+        buttonMapping[divideButton] = "/"
+        buttonMapping[equalButton] = "="
+        
+        layout(options: LayoutOptions())
     }
     
     @objc func didTapButton(_ button: UIButton) {
         
-        switch button {
-            
-        case addButton:
-            delegate?.didSelectValue(value: "+")
-            
-        case subtractButton:
-            delegate?.didSelectValue(value: "-")
-            
-        case multiplyButton:
-            delegate?.didSelectValue(value: "x")
-            
-        case divideButton:
-            delegate?.didSelectValue(value: "/")
-            
-        case equalButton:
-            delegate?.didSelectValue(value: "=")
-            
-        default:
-            break
+        guard let key = buttonMapping[button] else {
+            fatalError()
         }
+        
+        delegate?.didSelectValue(value: key)
     }
 }

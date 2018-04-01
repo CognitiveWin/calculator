@@ -48,13 +48,14 @@ final class Engine {
         case "=":
             let algo = ShuntingYard(input: inputs)
             let postfix = algo.evaluate()
+            let result = Postfix(inputs: postfix).evaluate()
             
-            let expression = Postfix(inputs: postfix)
-            let result = expression.evaluate()
-            
-            inputs = []
-            inputs.append(result.first!)
-            output = [result.first!]
+            if let first = result.first {
+
+                inputs = []
+                inputs.append(first)
+                output = [first]
+            }
             
             break
             
@@ -68,7 +69,7 @@ final class Engine {
             
         case "0", "1", "2", "3", "4", "5", "6", "7", "8", "9":
             
-            if let op = inputs.last, ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"].contains(op) {
+            if let op = inputs.last, let _ = Double(op) {
                 
                 let value = "\(op)\(input)"
 

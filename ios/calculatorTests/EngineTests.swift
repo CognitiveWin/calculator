@@ -12,11 +12,9 @@ class EngineTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
     
@@ -88,6 +86,18 @@ class EngineTests: XCTestCase {
         XCTAssertTrue(engine.postfix == "-4.5")
         
         engine.add("C")
+        XCTAssertTrue(engine.infix == "Ready")
+        XCTAssertTrue(engine.postfix == "Ready")
+    }
+    
+    func testInput_emptyExpression_nothing() {
+        
+        let engine = Engine()
+        
+        XCTAssertTrue(engine.infix == "Ready")
+        XCTAssertTrue(engine.postfix == "Ready")
+        
+        engine.add("=")
         XCTAssertTrue(engine.infix == "Ready")
         XCTAssertTrue(engine.postfix == "Ready")
     }
